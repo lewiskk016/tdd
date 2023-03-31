@@ -19,8 +19,8 @@ describe "Array#two_sum" do
 	it 'does not detect spurious pairs' do
 		expect(arr.two_sum).to_not include([1,1])
 	end
-
-
-
-
+	it 'returns smaller index first' do
+		# expect(arr.two_sum).to_not eq([[2,3],[0,4]])		
+		expect(arr.two_sum[0][0]).to be < (arr.two_sum[1][0])
+	end
 end
