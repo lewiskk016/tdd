@@ -20,3 +20,8 @@ class Array
 		indices
 	end
 end
+
+def my_transpose(arr)
+	arr.transpose
+	# raise "invalid method" if !arr.is_a(Array)
+end

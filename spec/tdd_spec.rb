@@ -29,12 +29,24 @@ describe "Array#two_sum" do
 end
 
 describe "#my_transpose" do
-	it 'does not use Array#transpose'
-
-	it 'takes in a 2-d array and transposes' do
-		
+	arr = [
+		[0, 1, 2],
+		[3, 4, 5],
+		[6, 7, 8]
+	]
+	# it 'does not use Array#transpose' do
+	# 	# expect{my_transpose(arr).transpose}.to raise_error("invalid method")
+	# 	expect(arr).not_to receive(:transpose)
+	# 	my_transpose(arr)
+	# end
+	it 'takes in a 2-d array and converts row and column representations' do
+		expect(my_transpose(arr)).to eq(arr.transpose)	
 	end
+end
 
-
-
+describe '#stock_picker' do
+	stocks = [1,2,3,4,5,6,7,8]
+	it 'returns indices of the greatest difference between elements' do
+		expect(stock_picker(stocks)).to eq([0,7])
+	end
 end
