@@ -20,7 +20,21 @@ describe "Array#two_sum" do
 		expect(arr.two_sum).to_not include([1,1])
 	end
 	it 'returns smaller index first' do
-		# expect(arr.two_sum).to_not eq([[2,3],[0,4]])		
+		# expect(arr.two_sum).to_not eq([[2,3],[0,4]])
 		expect(arr.two_sum[0][0]).to be < (arr.two_sum[1][0])
 	end
+	it 'returns index pairs with the smaller ending index first if they share the same starting index' do
+		expect([1,-1,-1].two_sum).to eq([[0,1], [0,2]])
+	end
+end
+
+describe "#my_transpose" do
+	it 'does not use Array#transpose'
+
+	it 'takes in a 2-d array and transposes' do
+		
+	end
+
+
+
 end
