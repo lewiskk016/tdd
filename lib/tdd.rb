@@ -6,3 +6,16 @@ def my_uniq(arr)
 	end
 	return hash.keys
 end
+
+class Array
+	def two_sum
+		indices = []
+		(0...self.length).each do |i|
+			(i+1...self.length).each do |j|
+				indices << [i,j] if self[i] + self[j] == 0
+			end
+		end
+
+		indices
+	end
+end
